@@ -9,9 +9,9 @@ export default function TimeLineYear({ year, goBack }) {
         className="absolute top-[224px] right-[100px] z-20"
       />
       <img
-        src={`/gifs/${year}.jpg`}
+        src={`/gifs/${year}.gif`}
         alt=""
-        className="absolute top-[224px] left-[73px] w-[933px] h-[1116px] z-10"
+        className="absolute top-[0px] left-[0px] w-[1080px] h-[1920px] z-10"
       />
       <img
         src="/helper/footer.png"
@@ -20,7 +20,7 @@ export default function TimeLineYear({ year, goBack }) {
       />
       <img src={`/dates/${year}.jpg`} alt="" className="w-screen h-screen" />
       <button
-        className="absolute bottom-[200px] w-[400px] h-[150px]"
+        className="absolute bottom-[200px] w-[400px] h-[150px] z-30"
         onClick={goBack}
       />
     </div>
