@@ -3,6 +3,7 @@
 import { timeLineStops } from "@/timeLineStops";
 
 export default function TimeLineYear({ year, next, prev, goBack, returnHome }) {
+  console.log(year);
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center overflow-x-hidden scrollbar-hide">
       <img
@@ -45,8 +46,12 @@ export default function TimeLineYear({ year, next, prev, goBack, returnHome }) {
       {year >= 1 && (
         <button
           className={`absolute ${
-            year === 15 ? "bottom-[50px]" : "bottom-[200px]"
-          }  left-[100px] w-[200px] h-[150px] z-30`}
+            year === 15
+              ? "bottom-[50px]"
+              : year === 12
+              ? "bottom-[150px]"
+              : "bottom-[200px]"
+          } left-[100px] w-[200px] h-[150px] z-30`}
           onClick={prev}
         >
           <img src="/gifs/izquierda.gif" alt="" />
@@ -54,7 +59,9 @@ export default function TimeLineYear({ year, next, prev, goBack, returnHome }) {
       )}
       {year <= timeLineStops.length - 2 && (
         <button
-          className="absolute bottom-[200px] right-[100px] w-[200px] h-[150px] z-30"
+          className={`absolute ${
+            year === 12 ? "bottom-[150px]" : "bottom-[200px]"
+          } right-[100px] w-[200px] h-[150px] z-30`}
           onClick={next}
         >
           <img src="/gifs/derecha.gif" alt="" />
