@@ -8,6 +8,7 @@ export default function Home() {
   const [currentScreen, setCurrentScreen] = useState(0);
 
   function goToHome() {
+    localStorage.setItem("selectedYear", 0);
     setCurrentScreen(0);
   }
 
