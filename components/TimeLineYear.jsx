@@ -1,6 +1,6 @@
 "use client";
 
-export default function TimeLineYear({ year, goBack }) {
+export default function TimeLineYear({ year, goBack, returnHome }) {
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center overflow-x-hidden scrollbar-hide">
       <img
@@ -19,10 +19,17 @@ export default function TimeLineYear({ year, goBack }) {
         className="absolute top-[1309px] left-[73px] z-20"
       />
       <img src={`/dates/${year}.jpg`} alt="" className="w-screen h-screen" />
-      <button
-        className="absolute bottom-[200px] w-[400px] h-[150px] z-30"
-        onClick={goBack}
-      />
+      {year === 2022 ? (
+        <button
+          className="absolute bottom-[200px] w-[400px] h-[150px] z-30"
+          onClick={returnHome}
+        />
+      ) : (
+        <button
+          className="absolute bottom-[200px] w-[400px] h-[150px] z-30"
+          onClick={goBack}
+        />
+      )}
     </div>
   );
 }

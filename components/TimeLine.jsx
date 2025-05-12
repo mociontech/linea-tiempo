@@ -60,7 +60,11 @@ export default function TimeLine({ goBack }) {
         </div>
       )}
       {selectedYear !== 0 && (
-        <TimeLineYear year={selectedYear} goBack={closeYear} />
+        <TimeLineYear
+          year={selectedYear}
+          goBack={closeYear}
+          returnHome={goBack}
+        />
       )}
     </div>
   );
