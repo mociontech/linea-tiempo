@@ -20,10 +20,16 @@ export default function TimeLineYear({ year, goBack, returnHome }) {
       />
       <img src={`/dates/${year}.jpg`} alt="" className="w-screen h-screen" />
       {year === 2022 ? (
-        <button
-          className="absolute bottom-[200px] w-[400px] h-[150px] z-30"
-          onClick={returnHome}
-        />
+        <div>
+          <button
+            className="absolute bottom-[200px] w-[400px] h-[150px] z-30"
+            onClick={returnHome}
+          />
+          <button
+            className="absolute bottom-[200px] left-[100px] w-[400px] h-[150px] z-30"
+            onClick={goBack}
+          />
+        </div>
       ) : (
         <button
           className="absolute bottom-[200px] w-[400px] h-[150px] z-30"
