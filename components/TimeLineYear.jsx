@@ -3,7 +3,6 @@
 import { timeLineStops } from "@/timeLineStops";
 
 export default function TimeLineYear({ year, next, prev, goBack, returnHome }) {
-  console.log(year);
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center overflow-x-hidden scrollbar-hide">
       <img

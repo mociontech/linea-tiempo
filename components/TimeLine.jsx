@@ -75,9 +75,9 @@ export default function TimeLine({ goBack }) {
         <div>
           <img src="/screens/timeline.jpg" alt="" className="w-screen h-auto" />
           <img
-            src="/gifs/mano.gif"
+            src="/gifs/linea.gif"
             alt=""
-            className="absolute top-[550px] right-[250px] w-[221px] h-[221px] rotate-180"
+            className="absolute top-[830px] right-[250px] w-[492px] h-[492px]"
           />
           <img
             src="/gifs/abajo.gif"
