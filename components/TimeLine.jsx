@@ -59,11 +59,11 @@ export default function TimeLine({ goBack }) {
     const yearScroll = timeLineStops.find((year) => year.year == prevYear.year);
     if (!yearScroll) return;
 
-    containerRef.current.scrollTo({
-      top: yearScroll.scroll,
-      left: 0,
-      behavior: "smooth",
-    });
+    // containerRef.current.scrollTo({
+    //   top: yearScroll.scroll,
+    //   left: 0,
+    //   behavior: "smooth",
+    // });
   }, [selectedYear]);
 
   return (
