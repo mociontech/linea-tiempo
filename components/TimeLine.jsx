@@ -31,7 +31,7 @@ export default function TimeLine({ goBack }) {
     if (inactiveTimeout) clearTimeout(inactiveTimeout);
     const timeout = setTimeout(() => {
       goBack(); // Ejecutar goBack después de 5 segundos de inactividad
-    }, 300000); // 5000 ms = 5 segundos de inactividad
+    }, 30000); // 5000 ms = 5 segundos de inactividad
     setInactiveTimeout(timeout);
   }
 
@@ -59,11 +59,11 @@ export default function TimeLine({ goBack }) {
     const yearScroll = timeLineStops.find((year) => year.year == prevYear.year);
     if (!yearScroll) return;
 
-    // containerRef.current.scrollTo({
-    //   top: yearScroll.scroll,
-    //   left: 0,
-    //   behavior: "smooth",
-    // });
+    containerRef.current.scrollTo({
+      top: yearScroll.scroll,
+      left: 0,
+      behavior: "smooth",
+    });
   }, [selectedYear]);
 
   return (
